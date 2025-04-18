@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "name": "@polyseam/barout",
+  "description": "tiny template library for scripts",
+  "license": "Apache-2.0",
+  "tasks": {
+    "test": "deno test",
+    "checks": "deno lint && deno fmt --check"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  },
+  "exports": {
+    "./": "./mod.ts"
+  }
+}
