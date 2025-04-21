@@ -24,15 +24,5 @@ jobs:
 
       - run: deno task test
 
-      - name: Release CLI
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          generate_release_notes: true
-          files: |
-            dist/release-archives/cronx-*
-
-      - run: deno task clean-dist
-
       - name: Release Library
         run: deno publish
